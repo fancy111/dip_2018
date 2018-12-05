@@ -1,0 +1,131 @@
+$def with(src,h,w)
+
+<!DOCTYPE html>
+
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>DIP Project</title>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font_icon/css/pe-icon-7-stroke.css">
+        <link rel="stylesheet" href="assets/font_icon/css/helper.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/js/modernizr.js"></script>
+
+    </head>
+    <body id="body">
+
+        <!-- Header area -->
+        <header id="header">
+            <div class="center text-center">
+                <h1 class="bigheadline">Super Resolution</h1>
+                <br><br>
+                <h4 class="subheadline">An Efficient Method Based on RAISR</h4>
+            </div>
+            <div class="bottom">
+                <a data-scroll href="#services" class="scrollDown animated pulse" id="scrollToContent"><i class="pe-7s-angle-down-circle pe-va"></i></a>
+            </div>
+        </header>
+        
+        <!-- Content Area -->
+
+        <!-- Introduction section -->
+        <section id="services" class="service-area">
+            <div class="container">
+                <h2 class="block_title">Introduction</h2>
+                <h3>We choose super resolution as our project theme. Following is the introduction of our work.</h3> 
+                   <p> <br>1. First we implemented the RAISR method and changed it to the cuda version. 
+                    <br><br>2. Secondly, we made some changes on the basis of RAISR, got our results.
+                    <br><br>3. Finally, we compare our results with the bilinear interpolation method and put our experimental results on the website.</p>
+            </div>
+        </section><!-- Introduction -->
+
+        <!-- experiment Area -->
+        <section id="portfolio" class="portfolio-area">
+            <div class="container">
+                <h2 class="block_title">Do it Yourself</h2>
+                <div class="row port cs-style-3">
+                    <form method="POST" enctype="multipart/form-data" action="">
+                        <div class="col-md-1 col-sm-6 col-xs-12 item-space"></div>
+                        <div class="col-md-5 col-sm-6 col-xs-12">
+                            <p>Choose a file you want to upload</p>
+                            <span class="btn btn-success fileinput-button">
+                                <span>choose a file</span>
+                                <input type="file" name="myfile">
+                            </span>
+                        </div>
+                        <div class="col-md-1 col-sm-6 col-xs-12 item-space"></div>
+                        <div class="col-md-5 col-sm-6 col-xs-12 item-space">
+                            <p>Press this button to upload the image</p>
+                            <span class="btn btn-success fileinput-button">
+                                <span>upload</span>
+                                <input type="submit" />
+                            </span>
+                        </div>
+                    </form>
+                    
+                    $if src:
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-space">
+                            <figure>
+                                <img src="./static/BLI_$src" width="$w" height="$h" />
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 item-space">
+                            <figure>
+                                <img src="./static/HR_$src" width="$w" height="$h" />
+                            </figure>
+                        </div>
+                </div>
+            </div><!-- container -->
+        </section><!-- experiment -->
+
+        <!-- Explanation section -->
+        <section id="services" class="service-area">
+            <div class="container">
+                <h2 class="block_title">Some Explanations</h2>
+                <h3>You may have some questions about the experiment above. Following are some explanations about the experiment, you may find your answers in this section.</h3> 
+                   <p> <br>(1) We will reduce the image size by 1/2 first(to get the low resolution image); 
+                            then enlarge it using bilinear interpolation(as shown in the left Figure) and our method (as shown in the right Figure).
+                    <br><br>(2) If there seems to be no difference between the two images, try to enlarge the webpage
+                            (Ctrl+Mouse wheel)until you see the fuzzy edge pixels. And you'll find the high resolution image is more clear.
+                    <br><br>(3) If you still fail to find any difference, try to use an image with more details and lower size.
+                    <br><br>(4) I am sorry if all above don't work. We only train the model based on BSD500 dataset due to 
+                            time limitation. Maybe the difference between the picture you give and the dataset is too large.
+                </p>
+            </div>
+        </section><!-- Introduction -->
+        <!-- Footer Area -->
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-6">
+                        <p class="copyright">© Copyright 2018 </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Necessery scripts -->
+        <script src="assets/js/jquery-2.1.3.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script src="assets/js/jquery.actual.min.js"></script>
+        <script src="assets/js/smooth-scroll.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/script.js"></script>
+
+    </body>
+</html>
+
